@@ -1,4 +1,4 @@
-# crypbot
+# Crypbot
 Cryptobot - PHP cryptocurrency trading bot
 
 
