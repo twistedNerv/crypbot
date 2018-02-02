@@ -18,6 +18,8 @@ class bootstrap {
         }
         
         $controller = new $url[0];
+        $controller->load_model($url[0]);
+        
         if(isset($url[2])) {
             $controller->{$url[1]}($url[2]);
         } elseif(isset($url[1])) {
