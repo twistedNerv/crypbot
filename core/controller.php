@@ -13,11 +13,6 @@ class controller {
             require 'models/' . $name . '_model.php';
             $modelName = $name . '_model';
             $this->model = new $modelName();
-        } else {
-            require 'controllers/error.php';
-            $controller = new error();
-            $controller->file_not_exist($file);
-            return false;
-        }
+        } 
     }
 }
