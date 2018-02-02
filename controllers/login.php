@@ -7,8 +7,10 @@ class login extends controller {
     }
 
     public function index() {
-        require 'models/login_model.php';
-        $model = new login_model();
         $this->view->render('login/index');
+    }
+    
+    public function run() {
+        $this->model->run();
     }
 }

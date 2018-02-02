@@ -14,6 +14,11 @@
             <a href="<?php echo URL;?>help">Help</a>
             <a href="<?php echo URL;?>login">Login</a>
             <a href="<?php echo URL;?>help/sample1/12">Sample1</a>
-            <a href="<?php echo URL;?>help/sample2">Sample2</a><br>
+            <a href="<?php echo URL;?>help/sample2">Sample2</a>
+            <?php if(session::get('loggedIn') == true): ?>
+                <a href="<?php echo URL;?>dashboard/logout">Logout</a>
+            <?php else: ?>
+                <a href="<?php echo URL;?>login">Login</a>
+            <?php endif; ?>
         </div>
         <div id="content">

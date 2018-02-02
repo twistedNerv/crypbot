@@ -6,7 +6,7 @@ class help extends controller {
         parent::__construct();
     }
     
-    function index() {
+    public function index() {
         $this->view->render('help/index');
     }
     
