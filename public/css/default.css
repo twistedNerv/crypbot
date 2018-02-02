@@ -1,0 +1,18 @@
+body {
+    background: grey;
+}
+
+#header {
+    padding: 20px;
+    background: red;
+}
+
+#content {
+    padding: 20px;
+    background: yellow;
+}
+
+#footer {
+    padding: 20px;
+    background: green;
+}
