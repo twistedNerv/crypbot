@@ -11,7 +11,7 @@ class dashboard extends controller {
     }
     
     public function index() {
-        $this->view->render('dashboard/index');
+        $this->view->render('dashboard/index', false);
     }
     
     public function logout() {

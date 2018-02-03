@@ -6,13 +6,19 @@ class view {
         
     }
     
-    public function render($name, $custom = false) {
+    public function render($name, $isPlugin = true, $customTemplate = false) {
         
-        if($custom) {
-            require 'views/' . $name . '.php';
+        $prePath = '';
+        if($isPlugin) {
+            $trace = debug_backtrace();
+            $prePath = isset($trace[1]) ? 'plugins/' . $trace[1]['class'] . '/' : '';
+        }
+        
+        if($customTemplate) {
+            require $prePath . 'views/' . $name . '.php';
         } else {
             require 'views/header.php';
-            require 'views/' . $name . '.php';
+            require $prePath . 'views/' . $name . '.php';
             require 'views/footer.php';
         }
     }
