@@ -12,7 +12,7 @@
             <br>
             <a href="<?php echo URL;?>index">Index</a>
             <a href="<?php echo URL;?>help">Help</a>
-            <a href="<?php echo URL;?>login">Login</a>
+            <a href="<?php echo URL;?>dashboard">Dashboard</a>
             <a href="<?php echo URL;?>help/sample1/12/test">Sample1</a>
             <a href="<?php echo URL;?>help/sample2">Sample2</a>
             <?php if(session::get('loggedIn') == true): ?>

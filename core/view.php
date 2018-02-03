@@ -7,7 +7,6 @@ class view {
     }
     
     public function render($name, $isPlugin = true, $customTemplate = false) {
-        
         $prePath = '';
         if($isPlugin) {
             $trace = debug_backtrace();
