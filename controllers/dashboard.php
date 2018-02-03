@@ -5,8 +5,11 @@ class dashboard extends controller {
     function __construct() {
         parent::__construct();
         session::init();
-        if(session::get('loggedIn') == false) {
-            $this->logout();
+        $logged = session::get('loggedIn');
+        if($logged == false) {
+            session::destroy();
+            header('location: login');
+            exit;
         }
     }
     

@@ -13,4 +13,10 @@ class login extends controller {
     public function run() {
         $this->model->run();
     }
+    
+    public function logout() {
+        session::destroy();
+        header('location: ../login');
+        exit;
+    }
 }
