@@ -13,13 +13,14 @@ class view {
             $trace = debug_backtrace();
             $prePath = isset($trace[1]) ? 'plugins/' . $trace[1]['class'] . '/' : '';
         }
-        
+        // TODO: get template
+        $template = 'default/';
         if($customTemplate) {
-            require $prePath . 'views/' . $name . '.php';
+            require $prePath . 'views/' . $template . $name . '.php';
         } else {
-            require 'views/header.php';
-            require $prePath . 'views/' . $name . '.php';
-            require 'views/footer.php';
+            require 'views/' . $template . 'header.php';
+            require $prePath . 'views/' . $template . $name . '.php';
+            require 'views/' . $template . 'footer.php';
         }
     }
 
