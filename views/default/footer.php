@@ -1,6 +1,8 @@
+                </div>
+            </div>
         </div>
-        <div id="footer">
-            Footer
+        <div class="custom-footer">
+            tN
         </div>
     </body>
 </html>

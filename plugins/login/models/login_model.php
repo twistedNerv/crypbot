@@ -7,7 +7,6 @@ class login_model extends model {
     }
     
     public function run() {
-        
         //TODO: password_hash
         $username = isset($_POST['username']) ? $_POST['username'] : "";
         $password = isset($_POST['password']) ? $_POST['password'] : "";

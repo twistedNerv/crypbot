@@ -11,7 +11,7 @@ class bootstrap {
         $url = isset($_GET['url']) ? explode('/', filter_var(rtrim($_GET['url'], '/'), FILTER_SANITIZE_URL)) : null;
         
         $file = 'controllers/' . $url[0] . '.php';
-        $this->slug = '';
+        $this->slug = 'index';
         if(file_exists($file) || file_exists('plugins/' . $url[0] . '/' .  $file)) {
             $this->path = (file_exists($file)) ? '' :'plugins/' . $url[0] . '/';
             $this->controller = $this->slug = $url[0];

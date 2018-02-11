@@ -1,18 +1,96 @@
-body {
-    background: grey;
+html, 
+body,
+.container-fluid {
+    //background: grey;
+    height: 100%;
+}
+
+.nopadding {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
 }
 
 #header {
-    padding: 20px;
-    background: red;
+    //background: red;
 }
 
-#content {
-    padding: 20px;
-    background: yellow;
+.content * {
+   padding: 0 !important;
+   margin: 0 !important;
+   //height: 100%;
+   //background: yellow;
 }
 
-#footer {
-    padding: 20px;
-    background: green;
+.content {
+    //height: 100%;
+    min-height: calc(100% - 60px); 
+}
+
+.row {
+    //min-height: calc(50% - 30px);
+}
+
+.custom-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: transparent;
+    text-align: right;
+    color: white;
+    padding: 3px;
+}
+
+.single-box {
+    border: 1px solid black;
+    height: 100%;    
+}
+
+.resizible {
+    overflow: auto;
+    resize: both;
+}
+
+#save-boxes {
+    display: none;
+}
+
+#add-box {
+    display: none;
+}
+
+.box-settings-wrapper {
+    display: none;
+}
+
+.box-settings {
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    border: 1px dotted black;
+}
+
+.box-settings:hover .box-settings-content {
+    display: block;
+} 
+
+.box-settings-content {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    z-index: 1;
+    border: 1px dotted black;
+    width: 120px;
+}
+.box-settings-option:hover {
+    cursor: pointer;
+}
+
+.update-box-content-interface {
+    display: none;
+    position: absolute;
+    left: 40%;
+    background: #eee;
 }

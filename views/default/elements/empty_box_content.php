@@ -1,0 +1,1 @@
+Box ready to display the content.
