@@ -8,7 +8,7 @@ class error extends controller {
     
     public function file_not_exist($page) {
         $this->view->msg = "File: $page doesn't exist!<br />";
-        $this->view->render('error/index');
+        $this->view->render('error/index', false);
     }
 
 }

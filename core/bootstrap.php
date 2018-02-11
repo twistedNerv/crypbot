@@ -1,29 +1,34 @@
 <?php
 class bootstrap {
+    
+    protected $controller = 'index';
+    protected $method = 'index';
+    protected $params = [];
+    protected $path = '';
 
     function __construct() {
         
-        $url = isset($_GET['url']) ? explode('/', rtrim($_GET['url'], '/')) : null;
-        //var_dump($url);
-
-        $url[0] = empty($url[0]) ? 'index' : $url[0];
+        $url = isset($_GET['url']) ? explode('/', filter_var(rtrim($_GET['url'], '/'), FILTER_SANITIZE_URL)) : null;
+        
         $file = 'controllers/' . $url[0] . '.php';
-        if(file_exists($file)) {
-            require $file;
-        } else {
-            require 'controllers/error.php';
-            $controller = new error();
-            $controller->file_not_exist($file);
-            return false;
+        $this->slug = 'index';
+        if(file_exists($file) || file_exists('plugins/' . $url[0] . '/' .  $file)) {
+            $this->path = (file_exists($file)) ? '' :'plugins/' . $url[0] . '/';
+            $this->controller = $this->slug = $url[0];
+            unset($url[0]);
         }
         
-        $controller = new $url[0];
-        if(isset($url[2])) {
-            $controller->{$url[1]}($url[2]);
-        } elseif(isset($url[1])) {
-                $controller->{$url[1]}();
-        } else {
-            $controller->index();
+        require $this->path . 'controllers/' . $this->controller . '.php';
+        $this->controller = new $this->controller;
+        $this->controller->load_model($this->slug, $this->path);
+        
+        if(isset($url[1])) {
+            if(method_exists($this->controller, $url[1])) {
+                $this->method = $url[1];
+                unset($url[1]);
+            }
         }
+        $this->params = $url ? array_values($url) : [];
+        call_user_func_array([$this->controller, $this->method], $this->params);
     }
 }
