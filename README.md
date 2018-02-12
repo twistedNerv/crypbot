@@ -4,7 +4,6 @@ Cryptobot - PHP cryptocurrency trading bot
 
 Status:
 Currently developing simple MVC framework -> work in progress.
-Early stage! -> thats why master branch still empty :)
 
 Brief roadmap:
 - basic structure (MVC), gui
