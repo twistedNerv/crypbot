@@ -6,6 +6,12 @@ class view {
     
     function __construct() {
         $this->config = new config();
+        $this->session = new session();
+        if($this->session->get('loggedIn')) {
+            require 'controllers/user.php';
+            require 'models/user_model.php';
+            $this->user = new user();
+        }
     }
     
     public function render($name, $isPlugin = true, $customTemplate = false) {
@@ -39,9 +45,13 @@ class view {
     }
     
     private function file_get_contents_curl($url) {
+        $useragent = $_SERVER['HTTP_USER_AGENT'];
+        $strCookie = 'PHPSESSID=' . $_COOKIE['PHPSESSID'] . '; path=/';
+        session_write_close();
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch,CURLOPT_URL,$url);
+        curl_setopt($ch,CURLOPT_USERAGENT, $useragent);
+        curl_setopt( $ch, CURLOPT_COOKIE, $strCookie );
         $data = curl_exec($ch);
         curl_close($ch);
         echo $data;

@@ -40,6 +40,5 @@ class index extends controller {
     public function save_state() {
         $paramsArray = $_REQUEST['params'];
         $this->model->savePageState($paramsArray);
-        //var_dump($_REQUEST['params']);
     }
 }
