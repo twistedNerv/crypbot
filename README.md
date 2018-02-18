@@ -3,7 +3,7 @@ Cryptobot - PHP cryptocurrency trading bot
 
 
 Status:
--Currently developing simple MVC framework -> work in progress.-
+~~Currently developing simple MVC framework -> work in progress.~~
 Testing framework, gui style
 
 Brief roadmap:
