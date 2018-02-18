@@ -3,6 +3,7 @@
     style="width:300px;
             height:200px;"
     position="<?=$this->empty_position;?>">
+    <?php $this->config->loadAssets()?>
     <?php require 'box_settings.php'; ?>
     <div class="box-content">
         <?php require 'empty_box_content.php'; ?>
