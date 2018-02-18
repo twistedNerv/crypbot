@@ -19,7 +19,7 @@ class bootstrap {
         }
         
         require $this->path . 'controllers/' . $this->controller . '.php';
-        $this->controller = new $this->controller;
+        $this->controller = new $this->controller();
         $this->controller->load_model($this->slug, $this->path);
         
         if(isset($url[1])) {

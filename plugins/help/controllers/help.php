@@ -4,6 +4,8 @@ class help extends controller {
 
     function __construct() {
         parent::__construct();
+        $this->view->config->setPluginStyle('help','default.css');
+        $this->view->config->setPluginScript('help','default.js');
     }
     
     public function index() {

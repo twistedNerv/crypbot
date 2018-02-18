@@ -2,8 +2,18 @@
 
 class controller {
 
+    protected $url;
+    
     function __construct() {
-        $this->view = new View();
+        $this->view = new view();
+        $page = isset($_GET['url']) ? strtok(filter_var(rtrim($_GET['url'], '/'), FILTER_SANITIZE_URL), '/') : '';
+        if($this->view->config->getParam('login_active') == true && $page != 'login' ) {
+            $this->session = new session();
+            if($this->session->get('loggedIn') == false) {
+                $this->session->destroy();
+                header('location: login');
+            }
+        }
     }
 
     public function load_model($name, $path) {

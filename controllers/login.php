@@ -7,7 +7,7 @@ class login extends controller {
     }
 
     public function index() {
-        $this->view->render('index');
+        $this->view->render('login/index', false);
     }
     
     public function run() {
@@ -15,8 +15,11 @@ class login extends controller {
     }
     
     public function logout() {
-        session::destroy();
+        $this->session = new session();
+        $this->session->set('loggedIn', false);
+        $this->session->set('userId', false);
+        session_destroy();
         header('location: ../login');
-        exit;
+        die;
     }
 }

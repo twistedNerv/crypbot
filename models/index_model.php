@@ -74,15 +74,11 @@ class index_model extends model {
     public function savePageState($paramsArray) {
         $this->db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
         foreach($paramsArray as $singleParam) {
-            $this->id = $singleParam[0];
-            $this->width = $singleParam[1];
-            $this->height = $singleParam[2];
-            $this->position = $singleParam[3];
             $this->db->result = $this->db->prepare('UPDATE cb_boxes SET width = :width, height = :height, position = :position WHERE id = :id;');
-            $this->db->result->bindParam(':id', $this->id);
-            $this->db->result->bindParam(':width', $this->width);
-            $this->db->result->bindParam(':height', $this->height);
-            $this->db->result->bindParam(':position', $this->position);
+            $this->db->result->bindParam(':id', $singleParam[0]);
+            $this->db->result->bindParam(':width', $singleParam[1]);
+            $this->db->result->bindParam(':height', $singleParam[2]);
+            $this->db->result->bindParam(':position', $singleParam[3]);
             $this->db->result->execute();
         }
     }

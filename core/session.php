@@ -2,22 +2,22 @@
 
 class session {
     
-    public static function init() {
+    function __construct() {
         if(session_status() == PHP_SESSION_NONE)  
             session_start(); 
     }
 
-    public static function set($key, $value) {
+    public function set($key, $value) {
         $_SESSION[$key] = $value;
     }
     
-    public static function get($key) {
+    public function get($key) {
         if(isset($_SESSION[$key]))
             return $_SESSION[$key];
     }
     
-    public static function destroy() {
-        //unset($_SESSION);
-        session_destroy();
+    public function destroy() {
+        unset($_SESSION);
+        //session_destroy();
     }
 }
