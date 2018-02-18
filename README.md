@@ -19,3 +19,12 @@ Brief roadmap:
 - new market add
 - cross market arbitrage
 - automated trading
+
+____________________________________________________-
+
+Install
+
+- rename config_dev folder in config
+- fill data in config/globals.php
+- create DB tables from trash/db
+- manually insert user in DB
