@@ -19,7 +19,6 @@ class view {
             require $prePath . 'views/' . $this->config->getParam('template'). '/' . $name . '.php';
         } else {
             require 'views/' . $this->config->getParam('template') . '/header/index.php';
-            require 'views/' . $this->config->getParam('template') . '/header/menu.php';
             foreach($this->boxesArray as $singleBoxArray) {
                 $this->render_box($this->config->getParam('template'), $singleBoxArray);
             }
