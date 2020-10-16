@@ -1,6 +1,9 @@
 # Crypbot
 Cryptobot - PHP cryptocurrency trading bot
 
+Another project that will be finished one day :)))
+----------------------------
+![alt text](https://www.commitstrip.com/wp-content/uploads/2014/11/Strip-Side-project-650-finalenglish.jpg)
 
 Status:
 ~~Currently developing simple MVC framework -> work in progress.~~
