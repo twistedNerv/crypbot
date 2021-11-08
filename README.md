@@ -31,3 +31,7 @@ Install
 - fill data in config/globals.php
 - create DB tables from trash/db
 - manually insert user in DB
+
+----------------------------
+
+This project is not finished. Not secure for public use!

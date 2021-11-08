@@ -1,2 +1,2 @@
 <?php $this->config->loadAssets()?>
-<?php echo $this->sample1; ?>
+<iframe scrolling="yes" allowtransparency="true" src="https://cryptopanic.com/widgets/news/?bg_color=FFFFFF00&amp;font_family=sans&amp;header_bg_color=30343B03&amp;header_text_color=444444&amp;link_color=0091C2&amp;news_feed=recent&amp;posts_limit=4&amp;text_color=444444&amp;title=Latest%20News" width="100%" height="100%" frameborder="0"></iframe>

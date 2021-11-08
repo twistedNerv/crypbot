@@ -9,8 +9,9 @@
     <div class="update-box-content-interface">
         <?php /* TODO: this is hardcoded...get options from table */ ?>
         <select class="select-content-interface">
-            <option value="help/sample1/12/test">Sample 1</option>
-            <option value="help/sample2">Sample 2</option>
+            <option value="help/sample2/first_arg/second_arg">Test</option>
+            <option value="help/cryptopanic">Cryptopanic</option>
+            <option value="help/btcchart">BTC chart</option>
             <option value="help">Help</option>
         </select>  
     </div>

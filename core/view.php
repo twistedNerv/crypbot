@@ -54,6 +54,7 @@ class view {
         curl_setopt( $ch, CURLOPT_COOKIE, $strCookie );
         $data = curl_exec($ch);
         curl_close($ch);
-        echo $data;
+        //var_dump($data);
+        //echo "--" . $data . "--";
     }
 }

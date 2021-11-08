@@ -12,14 +12,19 @@ class help extends controller {
         $this->view->render('help/index');
     }
     
-    public function sample1($arg1 = false, $arg2 = false) {
-        $this->view->sample1 = "Optional1: " . $arg1 . "<br> Optional2: " . $arg2 . "<br>";
+    public function cryptopanic() {
+        $this->view->sample1 = '';
         $this->view->render('help/sample1');
     }
     
-    public function sample2() {
+    public function sample2($arg1 = false, $arg2 = false) {
         $model = new help_model();
-        $this->view->sample2 = $model->sample2();
+        $this->view->sample2 = "Argument 1: " . $arg1 . "<br> Argumnt 2: " . $arg2;
+        $this->view->sampleModel = $model->sample2();
         $this->view->render('help/sample2');
+    }
+    
+    public function btcchart() {
+        $this->view->render('help/btcchart');
     }
 }

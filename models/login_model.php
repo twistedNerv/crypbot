@@ -15,14 +15,19 @@ class login_model extends model {
             ":username" => $username,
             ":password" => $password
         ));
-        $data = $this->db->result->fetchAll(PDO::FETCH_ASSOC);
+        //echo "<pre>";$this->db->result->debugDumpParams();die;
+        //var_dump($this->db->result);die;
+        $data = $this->db->result->fetch(PDO::FETCH_ASSOC);
+        //var_dump($data);die;
         $this->rowCount = $this->db->result->rowCount();
         if($this->rowCount == 1) {
             $this->session = new session();
             $this->session->set('loggedIn', true);
             $this->session->set('userId', $data[0]['id']);
+            //var_dump($data[0]['id']);die;
             header('location: ../index');
         } else {
+            //echo "out";
             header('location: ../login');
         }
     }
