@@ -27,10 +27,10 @@ ____________________________________________________-
 
 Install
 
-- rename config_dev folder in config
+- rename config_dev folder in config or update existing config
 - fill data in config/globals.php
-- create DB tables from trash/db
-- manually insert user in DB
+- create DB and execute statements from files in trash/db_tables
+- default login test / test
 
 ----------------------------
 
