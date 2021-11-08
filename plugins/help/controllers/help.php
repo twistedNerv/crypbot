@@ -19,12 +19,24 @@ class help extends controller {
     
     public function sample2($arg1 = false, $arg2 = false) {
         $model = new help_model();
-        $this->view->sample2 = "Argument 1: " . $arg1 . "<br> Argumnt 2: " . $arg2;
+        $this->view->sample2 = "Passed arg. 1: " . $arg1 . "<br> Passed arg. 2: " . $arg2;
         $this->view->sampleModel = $model->sample2();
         $this->view->render('help/sample2');
     }
     
     public function btcchart() {
         $this->view->render('help/btcchart');
+    }
+    
+    public function btcbasic() {
+        $this->view->render('help/btcbasic');
+    }
+    
+    public function coinlist() {
+        $this->view->render('help/coinlist');
+    }
+    
+    public function btcdominance() {
+        $this->view->render('help/btcdominance');
     }
 }

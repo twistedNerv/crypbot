@@ -8,4 +8,4 @@ CREATE TABLE `cb_boxes` (
   `height` varchar(45) DEFAULT NULL,
   `position` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=224 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

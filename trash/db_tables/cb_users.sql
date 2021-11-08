@@ -13,4 +13,7 @@ CREATE TABLE `cb_users` (
   `createdIP` varchar(45) DEFAULT NULL,
   `theme` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+INSERT INTO `cb_users` (`username`, `password`, `nickname`, `level`, `active`, `theme`) VALUES 
+("test", "test", "test", 5, 1, "default");

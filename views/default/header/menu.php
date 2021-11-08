@@ -15,14 +15,14 @@
                 <li><a href="<?=URL?>help">Help</a></li>
                 <li><a href="<?=URL?>help/sample1/12/test">Sample1</a></li>
                 <li><a href="<?=URL?>help/sample2">Sample2</a></li>
-                <?php if(session::get('loggedIn')): ?>
-                    <li><a href="<?=URL?>login/logout">Logout</a></li>
-                <?php else: ?>
-                    <li><a href="<?=URL?>login">Login</a></li>
-                <?php endif; ?>
                 <li><a href="#" id="save-boxes">Save</a></li>
                 <li><a href="#" id="add-box">Add</a></li>
                 <li><a href="#" id="single-box-edit">Edit</a></li>
+                <?php if($this->session->get('loggedIn')) { ?>
+                    <li><a href="<?=URL?>login/logout">Logout</a></li>
+                <?php } else { ?>
+                    <li><a href="<?=URL?>login">Login</a></li>
+                <?php } ?>
             </ul>
         </div>
     </div>

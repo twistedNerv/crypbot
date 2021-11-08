@@ -7,7 +7,9 @@ class index extends controller {
     }
     
     public function index() {
+        //echo $this->session->get('loggedIn');die;
         $this->view->boxesArray = $this->model->getBoxesWithAttributesArray();
+        //echo "<pre>";var_dump($this->view->boxesArray);echo "</pre>";
         $this->view->render('index/index', false);
     }
     
