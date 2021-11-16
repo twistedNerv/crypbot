@@ -2,8 +2,7 @@ html,
 body,
 .container-fluid {
     height: 100%;
-    color: #666;
-    //background-color: #000;
+    color: #666666;
 }
 
 .nopadding {
@@ -61,6 +60,12 @@ body,
     display: inline-block;
     right: 0;
     border: 1px dotted black;
+    z-index: 9;
+}
+
+.select-content-interface {
+    position: relative;
+    z-index: 9;
 }
 
 .box-settings:hover .box-settings-content {

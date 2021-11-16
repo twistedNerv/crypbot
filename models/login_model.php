@@ -23,7 +23,7 @@ class login_model extends model {
         if($this->rowCount == 1) {
             $this->session = new session();
             $this->session->set('loggedIn', true);
-            $this->session->set('userId', $data[0]['id']);
+            $this->session->set('userId', $data['id']);
             //var_dump($data[0]['id']);die;
             header('location: ../index');
         } else {

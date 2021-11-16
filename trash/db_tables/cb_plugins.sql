@@ -6,4 +6,4 @@ CREATE TABLE `cb_plugins` (
   `active` tinyint(4) DEFAULT '0',
   `rights` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

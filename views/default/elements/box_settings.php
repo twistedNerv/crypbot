@@ -11,7 +11,10 @@
         <select class="select-content-interface">
             <option value="help/sample2/first_arg/second_arg">Test</option>
             <option value="help/cryptopanic">Cryptopanic</option>
+            <option value="help/btcbasic">BTC basic</option>
             <option value="help/btcchart">BTC chart</option>
+            <option value="help/btcdominance">BTC dominance</option>
+            <option value="help/coinlist">Coin list</option>
             <option value="help">Help</option>
         </select>  
     </div>

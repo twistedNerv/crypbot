@@ -1,0 +1,1 @@
+<iframe src="https://tygiacoin.com/en/en/widget/dominance-chart" style="width: 100%; overflow: hidden;scroll-behavior: unset;height: 100%;border: unset;"></iframe>
