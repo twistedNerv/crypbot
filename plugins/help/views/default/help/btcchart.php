@@ -2,3 +2,4 @@
     <div style="height:200px; padding:0px; margin:0px; width: 100%;">
         <iframe src="https://widget.coinlib.io/widget?type=single_v2&theme=light&coin_id=859&pref_coin_id=1505" width="100%" height="100%" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;line-height:14px;"></iframe>
     </div>
+</div>
